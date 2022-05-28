@@ -2,27 +2,97 @@
 // Tentukan tipe data dan struktur data yang menurut kalian tepat
 // Kalian bisa membuat variabel lain untuk dimasukkan ke dalam atribut user agar lebih mudah dibaca
 
+// Color List
+const yellow = "Yellow";
+const pink = "Pink";
+const white = "White";
+const purple = "Purple";
+const blue = "Blue";
+const black = "Black";
+const grey = "Grey";
+
+// Restaurant List
+const bento = "Bento";
+const sushi = "Sushi";
+const pancake = "Pancake";
+const eggy = "Eggy";
+const tempura = "Tempura";
+const padang = "Padang";
+const tteok = "Tteok";
+const katsu = "Katsu";
+const geprek = "Geprek";
+
+// Monica's fav color set
+let monicasColor = new Set();
+monicasColor.add(yellow);
+monicasColor.add(pink);
+monicasColor.add(white);
+monicasColor.add(purple);
+
+// Wendy's fav color set
+let wendysColor = new Set();
+wendysColor.add(blue);
+wendysColor.add(black);
+wendysColor.add(grey);
+
+// Monica's fav restaurant
+let monicasResto = new Set();
+monicasResto.add(bento);
+monicasResto.add(sushi);
+monicasResto.add(pancake);
+monicasResto.add(eggy);
+monicasResto.add(tempura);
+monicasResto.add(bento);
+monicasResto.add(eggy);
+monicasResto.add(padang);
+monicasResto.add(tteok);
+monicasResto.add(sushi);
+monicasResto.add(sushi);
+
+// Wendy's fav restaurant
+let wendysResto = new Set();
+wendysResto.add(tempura);
+wendysResto.add(bento);
+wendysResto.add(sushi);
+wendysResto.add(pancake);
+wendysResto.add(padang);
+wendysResto.add(katsu);
+wendysResto.add(geprek);
+wendysResto.add(pancake);
+wendysResto.add(eggy);
+
+// 1st user
 const firstUser = {
-    name: 'Monica',
-    gender: 'Female',
-    age: 17,
-    email: 'monica@dingdong.com',
-    favoriteColor: new Set('Yellow','Pink', 'White', 'Purple'),
-    isHavePet: 'Yes',
-    education: [['name: SD 01', 'city: Jakarta', 'graduate: 2016'],['name: SMP 02', 'city: Jakarta', 'graduate: 2019'], ['name: SMA 03', 'city: Tangerang']],
-    favoriteRestaurant: new Set('Bento','Sushi','Pancake','Eggy','Tempura','Bento','Eggy','Padang','Tteok','Sushi','Sushi'),
-  };
-  
-  const secondUser = {
-      name: 'Wendy',
-      gender: 'Male',
-      age: 23,
-      email: 'wendy@dingdong.com',
-      favoriteColor: new Set('Blue','Black', 'Grey'),
-      isHavePet: 'No',
-      education: [['name: SD 02','city: Jakarta','graduate: 2010'],['name: SMP 03','city: Bogor','graduate: 2013'], ['name: SMA 01', 'city: Surabaya', 'graduate: 2016'], [['name: Univesitas Maju', 'city: Tanggerang']]],
-      favoriteRestaurant: new Set('Tempura', 'Bento', 'Sushi', 'Pancake', 'Padang', 'Katsu', 'Geprek', 'Pancake', 'Eggy')
-  };
+    name: "Monica",
+    gender: "female",
+    age: "17",
+    email: "monica@dingdong.com",
+    favoriteColor: [...monicasColor],
+    isHavePet: "Yes",
+    education: [
+        { name: "SD 01", city: "Jakarta", graduate: "2016" },
+        { name: "SMP 02", city: "Jakarta", graduate: "2019" },
+        { name: "SMA 03", city: "Tangerang" },
+    ],
+    favoriteRestaurant: [...monicasResto],
+};
+
+// 2nd user
+const secondUser = {
+    name: "Wendy",
+    gender: "male",
+    age: "23",
+    email: "wendy@dingdong.com",
+    favoriteColor: [...wendysColor],
+    isHavePet: "No",
+    education: [
+        { name: "SD 02", city: "Jakarta", graduate: "2010" },
+        { name: "SMP 03", city: "Bogor", graduate: "2013" },
+        { name: "SMA 01", city: "Surabaya", graduate: "2016" },
+        { name: "Universitas Maju", city: "Tangerang" },
+    ],
+    favoriteRestaurant: [...wendysResto],
+};
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
 const users = [];
